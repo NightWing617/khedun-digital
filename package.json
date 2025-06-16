@@ -1,0 +1,19 @@
+{
+  "name": "khedun-digital",
+  "version": "1.0.0",
+  "description": "Khedun Digital - Where intelligent systems meet elegant design",
+  "main": "src/pages/index.html",
+  "scripts": {
+    "start": "live-server src/pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "automation",
+    "ai",
+    "marketing",
+    "digital-solutions"
+  ],
+  "author": "Kyle Khedun",
+  "license": "ISC"
+}

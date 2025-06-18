@@ -5,18 +5,28 @@ Where intelligent systems meet elegant design. A comprehensive digital solutions
 ## Project Structure
 
 ```
-src/
-├── pages/           # HTML pages
-│   ├── index.html
-│   ├── web.html
-│   ├── automation.html
-│   ├── ai.html
-│   └── marketing.html
-├── components/      # Reusable HTML components
-├── assets/
-│   ├── images/     # Image assets
-│   ├── styles/     # CSS files
-│   └── js/         # JavaScript files
+khedun-digital/
+├── index.html                 # Root landing page for GitHub Pages
+├── package.json              # Project configuration
+├── README.md                # Project documentation
+├── .gitignore              # Git ignore rules
+└── src/
+    ├── assets/
+    │   ├── images/         # All image assets
+    │   │   ├── logos/     # Brand logos
+    │   │   └── icons/     # UI icons
+    │   ├── styles/
+    │   │   ├── main.css   # Core styles
+    │   │   └── index.css  # Landing page specific styles
+    │   └── js/
+    │       └── main.js    # Core JavaScript functionality
+    ├── components/         # Reusable UI components
+    └── pages/             # Service pages
+        ├── web.html      # Web development services
+        ├── ai.html       # AI solutions
+        ├── automation.html # Process automation
+        └── marketing.html # Digital marketing
+
 ```
 
 ## Getting Started

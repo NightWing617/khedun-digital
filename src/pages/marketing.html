@@ -1,138 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data-Driven Marketing | Khedun Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/styles/main.css" />
-    <script src="../assets/js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        burntorange: '#E95A0C',
+                        charcoal: '#1A1A1A'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Raleway', 'Open Sans', 'sans-serif']
+                    },
+                    animation: {
+                        pulseSlow: 'pulse 4s ease-in-out infinite',
+                        glow: 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%,100%': { boxShadow: '0 0 5px #FFD700,0 0 10px #FFD700,0 0 20px #E95A0C' },
+                            '50%': { boxShadow: '0 0 10px #FFD700,0 0 20px #FFD700,0 0 40px #E95A0C' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
-<body class="bg-white text-gray-800 font-body">
+<body class="bg-charcoal text-white font-body">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-white bg-opacity-90 backdrop-blur-sm border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16 items-center">
-            <div class="flex items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
-                        <img src="../assets/images/khedun_digital_nav_icon.png" alt="Khedun Digital" class="w-10 h-10">
+    <nav class="fixed top-0 w-full z-50 bg-charcoal bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
+                            <img src="../assets/images/khedun_digital_nav_icon.png" alt="Khedun Digital" class="w-10 h-10">
+                        </div>
+                        <span class="ml-3 text-xl font-heading font-semibold">Khedun Digital</span>
                     </div>
-                    <span class="ml-3 text-xl font-heading font-semibold text-charcoal">Khedun Digital</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../../index.html" class="hover:text-gold transition-colors">Home</a>
+                    <a href="#packages" class="hover:text-gold transition-colors">Packages</a>
+                    <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-charcoal">
-                <a href="../../index.html" class="hover:text-burntorange transition-colors">Home</a>
-                <a href="#" class="hover:text-burntorange transition-colors">Packages</a>
-                <a href="#contact" class="hover:text-burntorange transition-colors">Contact</a>
-            </div>
-            <div class="md:hidden flex items-center">
-                <button id="menu-btn" class="text-charcoal">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-            </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white bg-opacity-95">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-charcoal">
-                <a href="../../index.html" class="block px-3 py-2 rounded-md hover:bg-gray-100">Home</a>
-                <a href="#" class="block px-3 py-2 rounded-md hover:bg-gray-100">Packages</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-100">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../../index.html" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Home</a>
+                <a href="#packages" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Packages</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero bg-gradient-to-br from-orange-100 to-pink-100 py-20 text-center mt-16">
-        <img src="../assets/images/khedun_digital_marketing_logo.png" alt="Khedun Digital Marketing" class="mx-auto mb-6 w-32">
-        <h1 class="text-4xl font-bold mb-4">📊 Data-Driven Marketing</h1>
-        <p class="text-lg max-w-2xl mx-auto">Leverage AI and analytics to grow your business with targeted, intelligent campaigns.</p>
+    <section class="pt-32 pb-24 px-4 relative bg-gradient-to-b from-charcoal to-black overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-charcoal via-black to-charcoal opacity-60"></div>
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center" data-aos="fade-up">
+            <img src="../assets/images/khedun_digital_marketing_logo.png" alt="KD Marketing" class="w-96 h-96 mb-6 animate-pulseSlow">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Data-Driven Marketing</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8">Leverage AI and analytics to grow your business with targeted, intelligent campaigns.</p>
+            <a href="#contact" class="bg-gold text-charcoal font-semibold px-8 py-3 rounded-lg transform hover:scale-105 hover:shadow-lg transition-all">Get Started</a>
+        </div>
     </section>
 
     <!-- Main Packages -->
-    <section class="py-12 px-6 bg-gray-50" id="packages">
-        <h2 class="text-3xl font-semibold text-center mb-10">🚀 Core Packages</h2>
-        <div class="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
-            <!-- Smart Business -->
-            <div class="bg-white shadow-xl rounded-2xl p-8 border border-gray-200">
-                <h3 class="text-2xl font-bold mb-4">Smart Business</h3>
-                <p class="text-xl font-semibold text-green-600 mb-2">R6000 once-off | R750/month</p>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Everything in Starter</li>
-                    <li>Google Business Profile setup</li>
-                    <li>On-page SEO optimization</li>
-                    <li>Keyword research with AI tools</li>
-                    <li>1 Google Ad campaign/month (awareness or conversions)</li>
-                    <li>Monthly performance report (Google Looker Studio)</li>
-                </ul>
-                <p class="text-sm text-gray-500 mt-4">R750 per revision</p>
-            </div>
+    <section id="packages" class="py-20 px-4 bg-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12" data-aos="fade-up">🚀 Core Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Smart Business -->
+                <div class="relative bg-black bg-opacity-30 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-heading font-semibold mb-2">Smart Business</h3>
+                    <p class="text-lg text-gold font-bold mb-4">R6000 once-off | R750/month</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 mb-6">
+                        <li>Everything in Starter</li>
+                        <li>Google Business Profile setup</li>
+                        <li>On-page SEO optimization</li>
+                        <li>Keyword research with AI tools</li>
+                        <li>1 Google Ad campaign/month (awareness or conversions)</li>
+                        <li>Monthly performance report (Google Looker Studio)</li>
+                    </ul>
+                    <p class="text-sm text-gray-400">R750 per revision</p>
+                </div>
 
-            <!-- Smart Business+ -->
-            <div class="bg-white shadow-xl rounded-2xl p-8 border border-gray-200">
-                <h3 class="text-2xl font-bold mb-4">Smart Business+</h3>
-                <p class="text-xl font-semibold text-green-600 mb-2">R7000 once-off | R1250/month</p>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Everything in Smart Business</li>
-                    <li>Facebook + Instagram page integration</li>
-                    <li>AI-generated content calendar (weekly post plan)</li>
-                    <li><strong>Advertising +</strong></li>
-                    <li>1–2 blog posts or ad captions/month (SEO-optimized)</li>
-                    <li>Monthly ROI tracking dashboard (Google Ads + site stats)</li>
-                    <li>All-in-one marketing + funnel visibility</li>
-                </ul>
+                <!-- Smart Business+ -->
+                <div class="relative bg-black bg-opacity-30 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-heading font-semibold mb-2">Smart Business+</h3>
+                    <p class="text-lg text-gold font-bold mb-4">R7000 once-off | R1250/month</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 mb-6">
+                        <li>Everything in Smart Business</li>
+                        <li>Facebook + Instagram page integration</li>
+                        <li>AI-generated content calendar (weekly post plan)</li>
+                        <li><strong>Advertising +</strong></li>
+                        <li>1–2 blog posts or ad captions/month (SEO-optimized)</li>
+                        <li>Monthly ROI tracking dashboard (Google Ads + site stats)</li>
+                        <li>All-in-one marketing & funnel visibility</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Advertising Side Packages -->
-    <section class="py-16 px-6">
-        <h2 class="text-3xl font-semibold text-center mb-10">🎯 Standalone Advertising Packages</h2>
-        <div class="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
-            <!-- Advertising + -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                <h3 class="text-xl font-bold mb-2">Advertising +</h3>
-                <p class="text-green-600 font-semibold mb-2">R350/month</p>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>2–3 static ads per month</li>
-                    <li>Delivered weekly via email</li>
-                    <li>Created on request</li>
-                    <li>Pause or cancel anytime</li>
-                </ul>
-            </div>
+    <section class="py-20 px-4 bg-black bg-opacity-40">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12" data-aos="fade-up">🎯 Standalone Advertising Packages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Advertising + -->
+                <div class="bg-charcoal p-6 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-heading font-semibold mb-2">Advertising +</h3>
+                    <p class="text-gold font-semibold mb-2">R350/month</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+                        <li>2–3 static ads per month</li>
+                        <li>Delivered weekly via email</li>
+                        <li>Created on request</li>
+                        <li>Pause or cancel anytime</li>
+                    </ul>
+                </div>
 
-            <!-- Advertising ++ -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                <h3 class="text-xl font-bold mb-2">Advertising ++</h3>
-                <p class="text-green-600 font-semibold mb-2">R750/month</p>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>2–3 ads/week across selected platforms</li>
-                    <li>Includes 1 video reel/week</li>
-                    <li>Tailored to your business type</li>
-                    <li>Pause or cancel anytime</li>
-                </ul>
-            </div>
+                <!-- Advertising ++ -->
+                <div class="bg-charcoal p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-heading font-semibold mb-2">Advertising ++</h3>
+                    <p class="text-gold font-semibold mb-2">R750/month</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+                        <li>2–3 ads/week across selected platforms</li>
+                        <li>Includes 1 video reel/week</li>
+                        <li>Tailored to your business type</li>
+                        <li>Pause or cancel anytime</li>
+                    </ul>
+                </div>
 
-            <!-- Advertising +++ -->
-            <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                <h3 class="text-xl font-bold mb-2">Advertising +++</h3>
-                <p class="text-green-600 font-semibold mb-2">R1250/month</p>
-                <ul class="list-disc list-inside space-y-1 text-sm">
-                    <li>3–5 custom ads/week</li>
-                    <li>Includes weekly calendar and 1 revision</li>
-                    <li>Automatic uploads (if integrated with other packages)</li>
-                    <li>Pause or cancel anytime</li>
-                </ul>
+                <!-- Advertising +++ -->
+                <div class="bg-charcoal p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-heading font-semibold mb-2">Advertising +++</h3>
+                    <p class="text-gold font-semibold mb-2">R1250/month</p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300 text-sm">
+                        <li>3–5 custom ads/week</li>
+                        <li>Includes weekly calendar and 1 revision</li>
+                        <li>Automatic uploads (if integrated with other packages)</li>
+                        <li>Pause or cancel anytime</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="text-center py-16 bg-orange-100">
-        <h2 class="text-3xl font-bold mb-4">Ready to Grow with Data?</h2>
-        <p class="mb-6 max-w-xl mx-auto">Book a free 15-minute strategy call and let’s build your digital footprint together.</p>
-        <a href="/contact.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold shadow">Get Started</a>
+    <section id="contact" class="py-20 px-4 bg-black bg-opacity-40 text-center" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">Ready to Grow with Data?</h2>
+        <a href="mailto:hello@khedun.digital" class="bg-gold text-charcoal font-semibold px-8 py-3 rounded-lg hover:shadow-lg transform hover:scale-105 transition-all">Book a Free Consult</a>
     </section>
+
+    <footer class="bg-charcoal py-12 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center">
+                        <div class="text-gold font-bold text-2xl font-heading">KD <span class="absolute mt-1 ml-0.5 text-xs text-burntorange">⚡</span></div>
+                    </div>
+                    <span class="ml-3 text-lg font-heading font-semibold">Khedun Digital</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="Twitter">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 0012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="Instagram">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.047 1.024.06 1.379.06 3.808s-.013 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.047-1.379.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427C2.328 14.784 2.315 14.429 2.315 12s.013-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.705 2.525c.636-.247 1.363-.416 2.427-.465C9.156 2.013 9.511 2 11.94 2h.374zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="LinkedIn">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM7 19H4V9h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zM20 19h-3v-5.6c0-1.337-.026-3.059-1.865-3.059-1.865 0-2.152 1.455-2.152 2.96V19h-3V9h2.881v1.367h.041c.401-.761 1.379-1.561 2.838-1.561C19.091 8.806 20 10.03 20 12.424V19z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-500">© 2023 Khedun Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

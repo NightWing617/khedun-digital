@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khedun Digital AI Assistants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        burntorange: '#E95A0C',
+                        charcoal: '#1A1A1A',
+                        darkbg: '#0F0F0F'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Raleway', 'Open Sans', 'sans-serif']
+                    },
+                    animation: {
+                        pulseSlow: 'pulse 4s ease-in-out infinite',
+                        glow: 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%,100%': { boxShadow: '0 0 5px #FFD700,0 0 10px #FFD700,0 0 20px #E95A0C' },
+                            '50%': { boxShadow: '0 0 10px #FFD700,0 0 20px #FFD700,0 0 40px #E95A0C' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .floating-cta{position:fixed;bottom:1rem;right:1rem;z-index:50;}
+    </style>
+</head>
+<body class="bg-charcoal text-white font-body">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-charcoal bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
+                        <img src="../assets/images/khedun_digital_nav_icon.png" alt="Khedun Digital" class="w-10 h-10">
+                    </div>
+                    <span class="ml-3 text-xl font-heading font-semibold">Khedun Digital</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+            <a href="../../index.html" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Home</a>
+            <a href="#overview" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Overview</a>
+            <a href="#pricing" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Pricing</a>
+            <a href="#contact" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Contact</a>
+        </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="text-white">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../../index.html" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Home</a>
+                <a href="#overview" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Overview</a>
+                <a href="#pricing" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Pricing</a>
+                <a href="#contact" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 px-4 relative bg-gradient-to-b from-charcoal to-black overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-charcoal via-black to-charcoal opacity-60"></div>
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Your Business Brain, Supercharged by AI</h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl">Empower your team with a secure, intelligent ChatUI built on your data</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg transition-all hover:bg-opacity-90">Schedule a Free Demo</a>
+                <a href="#pricing" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg transition-all hover:bg-gold hover:text-charcoal">View Pricing</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Overview -->
+    <section class="py-16 px-4 bg-charcoal" id="overview">
+        <div class="max-w-4xl mx-auto space-y-6 text-center" data-aos="fade-up">
+            <p>Khedun Digital AI offers custom GPT-powered ChatUI interfaces securely connected to Google Workspace (Drive, Docs, Gmail, Calendar) and trained on your internal business knowledge like contracts, SOPs, emails and notes.</p>
+            <p>Assistants handle data queries, execute tasks and generate documents — from invoice generation and SOP summarization to staff onboarding FAQs.</p>
+        </div>
+    </section>
+
+    <!-- Target Market -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="market">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-heading font-semibold mb-6" data-aos="fade-up">Who We Serve</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+                <li>Medical practices</li>
+                <li>Law firms</li>
+                <li>Agencies and consultancies</li>
+                <li>Operations-heavy small businesses</li>
+                <li>Customer service-heavy providers</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section class="py-16 px-4 bg-charcoal" id="features">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10" data-aos="fade-up">Core Features</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl mb-3">🧠</div>
+                    <p class="font-semibold">Natural Language Dashboards</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl mb-3">📁</div>
+                    <p class="font-semibold">Document Retrieval from Drive or Vault</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl mb-3">📨</div>
+                    <p class="font-semibold">Email Writing &amp; Calendar Management</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl mb-3">🔁</div>
+                    <p class="font-semibold">SOP + Workflow Interpretation</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-4xl mb-3">🔊</div>
+                    <p class="font-semibold">Optional Voice Assistant for Real-Time Use</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-4xl mb-3">📊</div>
+                    <p class="font-semibold">Structured Reporting + Summary Generation</p>
+                </div>
+                <div class="bg-darkbg p-6 rounded-lg text-center col-span-full" data-aos="fade-up" data-aos-delay="700">
+                    <div class="text-4xl mb-3">🔐</div>
+                    <p class="font-semibold">Local RAG-Based Retrieval with Embedding Models</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Callout Banner -->
+    <section class="py-6 px-4 bg-burntorange text-center text-charcoal font-semibold" id="callout">
+        Secure. Private. Built by real experts — not templates. HPCSA-aligned for medical. POPIA-safe for all industries.
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="pricing">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10" data-aos="fade-up">Premium Tier Pricing</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-gray-600">
+                <thead class="bg-charcoal">
+                    <tr>
+                        <th class="p-3 border-b border-gray-600">Plan</th>
+                        <th class="p-3 border-b border-gray-600">Features</th>
+                        <th class="p-3 border-b border-gray-600">Once-Off</th>
+                        <th class="p-3 border-b border-gray-600">Monthly</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3 font-semibold">AI Assistant Lite</td>
+                        <td class="p-3">
+                            – Google Drive + Gmail + Docs integration<br>
+                            – ChatUI interface for document Q&amp;A<br>
+                            – Summarize policies, extract key data<br>
+                            – Simple task automation (notes, reminders)<br>
+                            – 1-user setup + admin access
+                        </td>
+                        <td class="p-3">R26,000</td>
+                        <td class="p-3">R3,750</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3 font-semibold">AI Assistant Pro</td>
+                        <td class="p-3">
+                            Includes <strong>Lite</strong>, plus:<br>
+                            – Task execution (send email, create files)<br>
+                            – Calendar &amp; Gmail API sync<br>
+                            – Multi-user access<br>
+                            – Structured document form-fillers (e.g. sick notes, contracts)<br>
+                            – Contextual memory storage for FAQs
+                        </td>
+                        <td class="p-3">R29,000</td>
+                        <td class="p-3">R4,200</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3 font-semibold">AI Executive Suite</td>
+                        <td class="p-3">
+                            Includes <strong>Pro</strong>, plus:<br>
+                            – AI dashboard with task buttons (e.g. “Send This Week’s Invoices”)<br>
+                            – Voice interface option<br>
+                            – GPT plugin access + file indexing<br>
+                            – Integration with Obsidian-style vaults<br>
+                            – Offline/local fallback mode<br>
+                            – Staff query tracking + daily summary reports
+                        </td>
+                        <td class="p-3">R33,000</td>
+                        <td class="p-3">R4,800</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional Add-Ons -->
+    <section class="py-16 px-4 bg-charcoal" id="addons">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10" data-aos="fade-up">Optional Add-Ons</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-gray-600">
+                <thead class="bg-darkbg">
+                    <tr>
+                        <th class="p-3 border-b border-gray-600">Add-On</th>
+                        <th class="p-3 border-b border-gray-600">Description</th>
+                        <th class="p-3 border-b border-gray-600">Once-Off</th>
+                        <th class="p-3 border-b border-gray-600">Monthly</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🗣️ Voice Assistant Layer</td>
+                        <td class="p-3">GPT-powered voice chat interface for client/patient interaction or internal team assistant</td>
+                        <td class="p-3">R6,000</td>
+                        <td class="p-3">R1,750</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🧠 Knowledge Vault Assistant</td>
+                        <td class="p-3">Pulls insights from uploaded PDFs, SOPs, notes; embeds into searchable ChatUI</td>
+                        <td class="p-3">R4,500</td>
+                        <td class="p-3">R1,500</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🔄 CRM/ERP Integrator</td>
+                        <td class="p-3">Connects AI assistant with business tools (e.g. Medimass, Zoho, GoodX, Salesforce)</td>
+                        <td class="p-3">R5,000</td>
+                        <td class="p-3">R1,200</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🔐 Secure Offline Mode</td>
+                        <td class="p-3">Optional air-gapped version using local containers + GPT4All/OpenLLM fallback</td>
+                        <td class="p-3">R8,000</td>
+                        <td class="p-3">R1,800</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🧾 Report Generator</td>
+                        <td class="p-3">Auto-generates patient summaries, meeting minutes, case logs or legal briefs</td>
+                        <td class="p-3">R3,500</td>
+                        <td class="p-3">R750</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commission-Based Plan -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="retainer">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl font-heading font-semibold" data-aos="fade-up">Prefer a performance-based model?</h2>
+            <p class="text-lg">✅ Pay a lower setup fee (e.g., R10,000)<br>
+            ✅ Monthly payment based on metrics like increased client throughput, decreased admin time and AI-logged hours saved.<br>
+            Commission rates start at R100 per time-saving task, R300 per high-value client conversion assist, or R500 per auto-generated document.<br>
+            <span class="italic">Option only available after 1-month onboarding evaluation.</span></p>
+        </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-gradient-to-b from-charcoal to-darkbg">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl font-heading font-semibold" data-aos="fade-up">Get in Touch</h2>
+            <p class="text-gray-300">Book a strategy call or request a custom quotation to see how our assistants can streamline your business.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="mailto:hello@khedun.digital" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90">hello@khedun.digital</a>
+                <a href="tel:+27111234567" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-charcoal">+27 11 123 4567</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <div class="flex flex-col space-y-2">
+            <a href="#contact" class="bg-gold text-charcoal font-semibold px-4 py-2 rounded shadow hover:bg-opacity-90">Book Strategy Call</a>
+            <a href="#contact" class="bg-gold text-charcoal font-semibold px-4 py-2 rounded shadow hover:bg-opacity-90">Request Custom Quotation</a>
+            <a href="#retainer" class="bg-burntorange text-charcoal font-semibold px-4 py-2 rounded shadow hover:bg-opacity-90">Explore Performance-Based Model</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-darkbg py-12 px-4 border-t border-gray-800 mt-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center">
+                        <div class="text-gold font-bold text-2xl font-heading">KD <span class="absolute mt-1 ml-0.5 text-xs text-burntorange">⚡</span></div>
+                    </div>
+                    <span class="ml-3 text-lg font-heading font-semibold">Khedun Digital</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="Twitter">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="Instagram">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.047 1.024.06 1.379.06 3.808s-.013 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.047-1.379.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427C2.328 14.784 2.315 14.429 2.315 12s.013-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.705 2.525c.636-.247 1.363-.416 2.427-.465C9.156 2.013 9.511 2 11.94 2h.374zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold transition-colors" aria-label="LinkedIn">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM7 19H4V9h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zM20 19h-3v-5.6c0-1.337-.026-3.059-1.865-3.059-1.865 0-2.152 1.455-2.152 2.96V19h-3V9h2.881v1.367h.041c.401-.761 1.379-1.561 2.838-1.561C19.091 8.806 20 10.03 20 12.424V19z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-10 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-500">© 2025 Khedun Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

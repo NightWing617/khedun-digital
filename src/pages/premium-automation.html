@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khedun Digital Automation | Premium Offline-First Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Raleway:wght@400;500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/main.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        burntorange: '#E95A0C',
+                        charcoal: '#1A1A1A'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Raleway', 'Open Sans', 'sans-serif']
+                    },
+                    animation: {
+                        pulseSlow: 'pulse 4s ease-in-out infinite',
+                        glow: 'glow 2s ease-in-out infinite alternate'
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%,100%': { boxShadow: '0 0 5px #FFD700,0 0 10px #FFD700,0 0 20px #E95A0C' },
+                            '50%': { boxShadow: '0 0 10px #FFD700,0 0 20px #FFD700,0 0 40px #E95A0C' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .floating-cta{position:fixed;bottom:1rem;right:1rem;z-index:50;}
+    </style>
+</head>
+<body class="bg-charcoal text-white font-body">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-charcoal bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16">
+            <div class="flex items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
+                        <img src="../assets/images/khedun_digital_nav_icon.png" alt="Khedun Digital" class="w-10 h-10">
+                    </div>
+                    <span class="ml-3 text-xl font-heading font-semibold">Khedun Digital</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="../../index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="#audit" class="hover:text-gold transition-colors">Audit</a>
+                <a href="#pricing" class="hover:text-gold transition-colors">Pricing</a>
+                <a href="#book" class="hover:text-gold transition-colors">Book</a>
+                <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="text-white">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="../../index.html" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Home</a>
+                <a href="#audit" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Audit</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Pricing</a>
+                <a href="#book" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Book</a>
+                <a href="#faq" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 px-4 relative bg-gradient-to-b from-charcoal to-black overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-charcoal via-black to-charcoal opacity-60"></div>
+        <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
+            <img src="../assets/images/khedun_digital_automation_logo.png" alt="KD Automation" class="w-96 h-96 mb-6 animate-pulseSlow">
+        <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Offline-first. Secure. Tailored by a doctor.</h1>
+        <p class="text-xl max-w-3xl mx-auto mb-8">Automation built for healthcare, legal and other privacy-sensitive sectors using Docker + n8n.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#audit" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg transform hover:scale-105 hover:shadow-lg transition-all">Schedule Audit</a>
+            <a href="#pricing" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-charcoal transition-colors">View Pricing</a>
+        </div>
+    </div>
+    </section>
+
+    <!-- Target Clients -->
+    <section class="py-16 px-4 bg-charcoal" id="clients">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-heading font-semibold mb-6">Who We Serve</h2>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+                <li>Solo &amp; group medical practices</li>
+                <li>Specialists and small clinics</li>
+                <li>Legal and financial firms</li>
+                <li>Operational businesses</li>
+                <li>Privacy-sensitive sectors</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Feature Overview -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="features">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10">Feature Overview</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">🔒 Local-first <strong>n8n automation</strong> workflows deployed via Docker</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">📤 Automated <strong>invoice and claims processing</strong></div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">🧾 <strong>HealthBridge / GoodX / Medimass</strong> integrations</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">📆 WhatsApp + SMS appointment reminders</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">🧠 AI reception assistant with voice/text</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">📂 File automation for labs &amp; reports</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">⚖️ POPIA-ready workflows with local encryption</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">📊 KPI dashboards for practice health</div>
+                <div class="bg-black bg-opacity-30 p-6 rounded-lg">🧠 Optional AI vault (Obsidian/RAG)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="py-16 px-4 bg-charcoal" id="pricing">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-8">Medical+ Automation Pricing</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-gray-600">
+                <thead class="bg-black bg-opacity-20">
+                    <tr>
+                        <th class="p-3 border-b border-gray-600">Package</th>
+                        <th class="p-3 border-b border-gray-600">Best For</th>
+                        <th class="p-3 border-b border-gray-600">Once-Off</th>
+                        <th class="p-3 border-b border-gray-600">Monthly</th>
+                        <th class="p-3 border-b border-gray-600">Includes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3 font-semibold">Medical+ Core</td>
+                        <td class="p-3">Solo GP / 1-Room Practice</td>
+                        <td class="p-3">R47,000</td>
+                        <td class="p-3">R6,000</td>
+                        <td class="p-3">
+                            – 1–2 offline workflows (intake → Medimass, lab parser)<br>
+                            – WhatsApp appointment reminders<br>
+                            – POPIA compliance checklist<br>
+                            – KPI dashboard Lite<br>
+                            – Docker-based automation deployment<br>
+                            – Staff onboarding session
+                        </td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3 font-semibold">Medical+ Pro</td>
+                        <td class="p-3">Specialist / 2–3 Rooms</td>
+                        <td class="p-3">R55,000</td>
+                        <td class="p-3">R7,500</td>
+                        <td class="p-3">
+                            – All Core features<br>
+                            – + Claim and invoice automation<br>
+                            – Auto file organization (labs, sick notes)<br>
+                            – Voice receptionist (basic commands)<br>
+                            – Multi-user room-based workflow logic<br>
+                            – Structured CSV/PDF export of documentation
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h2 class="text-3xl font-heading font-semibold text-center my-8">Standard Business Automation Plans</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-gray-600">
+                <thead class="bg-black bg-opacity-20">
+                    <tr>
+                        <th class="p-3 border-b border-gray-600">Package</th>
+                        <th class="p-3 border-b border-gray-600">Ideal For</th>
+                        <th class="p-3 border-b border-gray-600">Once-Off</th>
+                        <th class="p-3 border-b border-gray-600">Monthly</th>
+                        <th class="p-3 border-b border-gray-600">Includes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">Automation Basic</td>
+                        <td class="p-3">Solopreneurs / Admin Workflows</td>
+                        <td class="p-3">R4,000</td>
+                        <td class="p-3">R500</td>
+                        <td class="p-3">– 1 simple workflow (email forwarder, lead capture, contact sync)<br>– Webhook/trigger setup<br>– Local deployment via Docker</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">Automation Pro</td>
+                        <td class="p-3">Small Businesses (2–5 Ops)</td>
+                        <td class="p-3">R7,000</td>
+                        <td class="p-3">R1,000</td>
+                        <td class="p-3">– 3 custom workflows (e.g. CRM sync, chatbot, invoice routing)<br>– Dashboard UI (basic)<br>– SMS/email/Telegram notifications</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">Automation Elite</td>
+                        <td class="p-3">Multi-service Ops Teams</td>
+                        <td class="p-3">R11,000</td>
+                        <td class="p-3">R1,500</td>
+                        <td class="p-3">– End-to-end business automation suite<br>– CRM + chatbot + form handling + PDF generator<br>– Scheduled triggers (weekly emails, task delegation)<br>– Data visualization board<br>– Custom Docker deployment & training</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <h3 class="text-2xl font-heading font-semibold text-center mt-10 mb-4">Add-Ons Shared Across Plans</h3>
+            <ul class="max-w-4xl mx-auto list-disc list-inside space-y-1">
+                <li>Social Media Auto-Poster: +R2,000 | +R500/mo</li>
+                <li>Reception AI Assistant: +R4,000 | +R1,000/mo</li>
+                <li>CRM/ERP Integration (Zoho, Xero, etc.): +R3,500 | +R800/mo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Medical Add-Ons -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="addons">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10">Medical/Enterprise Add-Ons</h2>
+            <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-gray-600">
+                <thead class="bg-black bg-opacity-20">
+                    <tr>
+                        <th class="p-3 border-b border-gray-600">Add-On</th>
+                        <th class="p-3 border-b border-gray-600">Description</th>
+                        <th class="p-3 border-b border-gray-600">Once-Off</th>
+                        <th class="p-3 border-b border-gray-600">Monthly</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🗣️ Voice AI Receptionist</td>
+                        <td class="p-3">Handles calls, bookings, questions</td>
+                        <td class="p-3">R14,000</td>
+                        <td class="p-3">R2,500</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">📊 KPI Dashboard Pro</td>
+                        <td class="p-3">Clinic/business performance metrics</td>
+                        <td class="p-3">R7,000</td>
+                        <td class="p-3">R1,750</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🧾 Patient Triage Chatbot</td>
+                        <td class="p-3">Flags symptoms &amp; urgency</td>
+                        <td class="p-3">R6,000</td>
+                        <td class="p-3">R1,250</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🔄 WhatsApp Triage Routing</td>
+                        <td class="p-3">Auto-routes to correct specialist/admin</td>
+                        <td class="p-3">R4,000</td>
+                        <td class="p-3">R950</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🧠 AI Document Assistant (RAG)</td>
+                        <td class="p-3">Private doc Q&amp;A (offline/local)</td>
+                        <td class="p-3">R9,000</td>
+                        <td class="p-3">R2,000</td>
+                    </tr>
+                    <tr class="border-t border-gray-700">
+                        <td class="p-3">🔐 Docker Stack Pro Build</td>
+                        <td class="p-3">Multi-agent, vaults, logging</td>
+                        <td class="p-3">R12,000</td>
+                        <td class="p-3">R2,000 optional support</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retainer Model -->
+    <section class="py-16 px-4 bg-charcoal" id="retainer">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <h2 class="text-3xl font-heading font-semibold">Results-Based Payment Plan</h2>
+            <p>Lower upfront cost: R10,000–R15,000<br>
+            Ongoing monthly payment tied to measurable results like increased claims, reduced no-shows or time saved.</p>
+            <p class="italic">Commission brackets:</p>
+            <ul class="list-disc list-inside inline-block text-left">
+                <li>R100/task or form automated</li>
+                <li>R300 per successful medical aid claim</li>
+                <li>R500 per converted follow-up, referral or return booking</li>
+            </ul>
+            <p class="text-sm">Requires 30-day audit benchmark before activation.</p>
+        </div>
+    </section>
+
+    <!-- SLA Section -->
+    <section class="py-16 px-4 bg-black bg-opacity-40" id="sla">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold mb-4">Delivery Timelines &amp; Contractual Terms</h2>
+            <p class="mb-4">All automation builds are custom-developed and may take <strong>up to 21 business days</strong> from onboarding to full implementation, depending on schedule and complexity.</p>
+            <p class="mb-4">Payment is due on delivery of working automation systems within the agreed window. If the project exceeds the timeline without cause from the client’s side, Khedun Digital may offer a discount or make the project optional for payment.</p>
+            <p>A signed service contract guarantees mutual accountability and ensures no resource waste.</p>
+        </div>
+    </section>
+
+    <!-- Audit CTA -->
+    <section class="py-16 px-4 bg-charcoal" id="audit">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-heading font-semibold mb-4">Schedule an Automation Audit with Dr. Bryce</h2>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-2 rounded text-charcoal" required>
+                <input type="text" placeholder="Practice Name" class="w-full p-2 rounded text-charcoal" required>
+                <input type="date" placeholder="Preferred Date" class="w-full p-2 rounded text-charcoal" required>
+                <button type="submit" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Book CTA -->
+    <section class="py-16 px-4 bg-gold" id="book">
+        <div class="max-w-3xl mx-auto text-center text-charcoal">
+            <h2 class="text-3xl font-heading font-semibold mb-4">Book Your Workflow Deployment</h2>
+            <p class="mb-6">Pick a date on our calendar or request a quote via WhatsApp.</p>
+            <a href="#audit" class="bg-burntorange text-charcoal font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90">Open Calendar</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 px-4 bg-charcoal" id="faq">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-heading font-semibold text-center mb-8">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-black bg-opacity-30 p-4 rounded">
+                    <summary class="cursor-pointer font-semibold">How long does setup take?</summary>
+                    <p class="mt-2">Most projects are completed within 21 business days after onboarding.</p>
+                </details>
+                <details class="bg-black bg-opacity-30 p-4 rounded">
+                    <summary class="cursor-pointer font-semibold">Can this run on my existing machine?</summary>
+                    <p class="mt-2">Yes, our Docker-based deployments run on standard hardware without cloud dependency.</p>
+                </details>
+                <details class="bg-black bg-opacity-30 p-4 rounded">
+                    <summary class="cursor-pointer font-semibold">How secure is local Docker?</summary>
+                    <p class="mt-2">Workflows run in isolated containers with optional local encryption to meet POPIA requirements.</p>
+                </details>
+                <details class="bg-black bg-opacity-30 p-4 rounded">
+                    <summary class="cursor-pointer font-semibold">Do you train my team?</summary>
+                    <p class="mt-2">Yes, every package includes onboarding, and we offer extended support as needed.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <div class="flex flex-col space-y-2">
+            <a href="#audit" class="bg-gold text-charcoal font-semibold px-4 py-2 rounded shadow hover:bg-opacity-90">Schedule Audit</a>
+            <a href="#book" class="bg-burntorange text-charcoal font-semibold px-4 py-2 rounded shadow hover:bg-opacity-90">Book Deployment</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal py-8 px-4 text-center border-t border-burntorange">
+        <p class="text-gray-300">© 2025 Khedun Digital. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

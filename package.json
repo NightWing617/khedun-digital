@@ -5,7 +5,7 @@
   "main": "src/pages/index.html",
   "scripts": {
     "start": "live-server src/pages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node tests/run-tests.js"
   },
   "keywords": [
     "web",
@@ -15,5 +15,8 @@
     "digital-solutions"
   ],
   "author": "Kyle Khedun",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.1.0"
+  }
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/assets/styles/main.css">
     <link rel="stylesheet" href="src/assets/styles/index.css">
     <script src="src/assets/js/main.js"></script>
+    <script src="src/assets/js/reactbits.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -50,7 +51,7 @@
 <body class="bg-charcoal text-white font-body">
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-darkbg bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
-        <div class="flex justify-between items-center h-16 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-8">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
                         <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
@@ -93,10 +94,10 @@
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight">
+                    <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight rb-reveal">
                         Where intelligent systems meet <span class="text-gold">elegant design</span>
                     </h1>
-                    <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                    <p class="text-xl text-gray-300 mb-8 max-w-2xl rb-reveal">
                         Khedun Digital helps businesses scale through automation, AI, intelligent marketing, and seamless digital experiences.
                     </p>
                     <div class="flex flex-wrap gap-4">
@@ -142,7 +143,7 @@
             
             <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Web & UX Service Card -->
-                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade">
+                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade rb-reveal">
                     <div class="p-8">
                         <div class="mb-6 flex justify-center">
                             <div class="relative">
@@ -172,7 +173,7 @@
                 </div>
                 
                 <!-- Marketing Service Card -->
-                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-75">
+                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-75 rb-reveal">
                     <div class="p-8">
                         <div class="mb-6 flex justify-center">
                             <div class="relative">
@@ -202,7 +203,7 @@
                 </div>
                 
                 <!-- AI Service Card -->
-                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-100">
+                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-100 rb-reveal">
                     <div class="p-8">
                         <div class="mb-6 flex justify-center">
                             <div class="relative">
@@ -232,7 +233,7 @@
                 </div>
                 
                 <!-- Automation Service Card -->
-                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-150">
+                <div class="service-card group bg-charcoal rounded-xl overflow-hidden border border-gray-800 hover:border-gold transition-all duration-300 scroll-fade delay-150 rb-reveal">
                     <div class="p-8">
                         <div class="mb-6 flex justify-center">
                             <div class="relative">
@@ -588,5 +589,6 @@
         // Initialize on load
         document.addEventListener('DOMContentLoaded', handleScrollFade);
     </script>
+    <script>ReactBits.reveal(".rb-reveal");</script>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../assets/styles/index.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/reactbits.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -46,8 +47,7 @@
 <body class="bg-charcoal text-white font-body">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-charcoal bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-8">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
@@ -59,7 +59,7 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../../index.html" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Home</a>
                     <a href="#overview" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Overview</a>
-                    <a href="#pricing" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Pricing</a>
+                    <a href="#packages" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Packages</a>
                     <a href="#contact" class="text-white px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
@@ -75,7 +75,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="../../index.html" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Home</a>
                 <a href="#overview" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Overview</a>
-                <a href="#pricing" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Pricing</a>
+                <a href="#packages" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Packages</a>
                 <a href="#contact" class="text-white block px-4 py-2 rounded-md hover:bg-gold hover:text-charcoal transition-colors">Contact</a>
             </div>
         </div>
@@ -86,11 +86,11 @@
         <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-charcoal via-black to-charcoal opacity-60"></div>
         <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center" data-aos="fade-up">
             <img src="../assets/images/khedun_digital_ai_logo.png" alt="KD AI Assistants" class="w-96 h-96 mb-6 animate-pulseSlow">
-            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Your Business Brain, Supercharged by AI</h1>
-            <p class="text-xl text-gray-300 mb-8 max-w-2xl">Empower your team with a secure, intelligent ChatUI built on your data</p>
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 rb-reveal">Your Business Brain, Supercharged by AI</h1>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl rb-reveal">Empower your team with a secure, intelligent ChatUI built on your data</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#contact" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg transition-all hover:bg-opacity-90">Schedule a Free Demo</a>
-                <a href="#pricing" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg transition-all hover:bg-gold hover:text-charcoal">View Pricing</a>
+                <a href="#packages" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg transition-all hover:bg-gold hover:text-charcoal">View Packages</a>
             </div>
         </div>
     </section>
@@ -162,16 +162,14 @@
     <!-- Pricing -->
     <section class="py-16 px-4 bg-black bg-opacity-40" id="pricing">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-heading font-semibold text-center mb-10" data-aos="fade-up">Premium Tier Pricing</h2>
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10" data-aos="fade-up">Assistant Packages</h2>
             <div class="overflow-x-auto">
             <table class="min-w-full text-left border border-gray-600">
                 <thead class="bg-charcoal">
                     <tr>
                         <th class="p-3 border-b border-gray-600">Plan</th>
                         <th class="p-3 border-b border-gray-600">Features</th>
-                        <th class="p-3 border-b border-gray-600">Once-Off</th>
-                        <th class="p-3 border-b border-gray-600">Monthly</th>
-                    </tr>
+                                                                    </tr>
                 </thead>
                 <tbody>
                     <tr class="border-t border-gray-700">
@@ -183,9 +181,7 @@
                             – Simple task automation (notes, reminders)<br>
                             – 1-user setup + admin access
                         </td>
-                        <td class="p-3">R26,000</td>
-                        <td class="p-3">R3,750</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3 font-semibold">AI Assistant Pro</td>
                         <td class="p-3">
@@ -196,9 +192,7 @@
                             – Structured document form-fillers (e.g. sick notes, contracts)<br>
                             – Contextual memory storage for FAQs
                         </td>
-                        <td class="p-3">R29,000</td>
-                        <td class="p-3">R4,200</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3 font-semibold">AI Executive Suite</td>
                         <td class="p-3">
@@ -210,9 +204,7 @@
                             – Offline/local fallback mode<br>
                             – Staff query tracking + daily summary reports
                         </td>
-                        <td class="p-3">R33,000</td>
-                        <td class="p-3">R4,800</td>
-                    </tr>
+                                                                    </tr>
                 </tbody>
             </table>
             </div>
@@ -237,33 +229,23 @@
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🗣️ Voice Assistant Layer</td>
                         <td class="p-3">GPT-powered voice chat interface for client/patient interaction or internal team assistant</td>
-                        <td class="p-3">R6,000</td>
-                        <td class="p-3">R1,750</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🧠 Knowledge Vault Assistant</td>
                         <td class="p-3">Pulls insights from uploaded PDFs, SOPs, notes; embeds into searchable ChatUI</td>
-                        <td class="p-3">R4,500</td>
-                        <td class="p-3">R1,500</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🔄 CRM/ERP Integrator</td>
                         <td class="p-3">Connects AI assistant with business tools (e.g. Medimass, Zoho, GoodX, Salesforce)</td>
-                        <td class="p-3">R5,000</td>
-                        <td class="p-3">R1,200</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🔐 Secure Offline Mode</td>
                         <td class="p-3">Optional air-gapped version using local containers + GPT4All/OpenLLM fallback</td>
-                        <td class="p-3">R8,000</td>
-                        <td class="p-3">R1,800</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🧾 Report Generator</td>
                         <td class="p-3">Auto-generates patient summaries, meeting minutes, case logs or legal briefs</td>
-                        <td class="p-3">R3,500</td>
-                        <td class="p-3">R750</td>
-                    </tr>
+                                                                    </tr>
                 </tbody>
             </table>
             </div>
@@ -274,9 +256,9 @@
     <section class="py-16 px-4 bg-black bg-opacity-40" id="retainer">
         <div class="max-w-4xl mx-auto text-center space-y-6">
             <h2 class="text-3xl font-heading font-semibold" data-aos="fade-up">Prefer a performance-based model?</h2>
-            <p class="text-lg">✅ Pay a lower setup fee (e.g., R10,000)<br>
+            <p class="text-lg">✅ Pay a lower setup fee  (low setup fee)<br>
             ✅ Monthly payment based on metrics like increased client throughput, decreased admin time and AI-logged hours saved.<br>
-            Commission rates start at R100 per time-saving task, R300 per high-value client conversion assist, or R500 per auto-generated document.<br>
+            Commission rates are based on measurable results.<br>
             <span class="italic">Option only available after 1-month onboarding evaluation.</span></p>
         </div>
     </section>
@@ -332,5 +314,6 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
+<script>ReactBits.reveal(".rb-reveal");</script>
 </body>
 </html>

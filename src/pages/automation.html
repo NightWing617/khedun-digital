@@ -41,7 +41,7 @@
 <body class="bg-charcoal text-white font-body">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-charcoal bg-opacity-90 backdrop-blur-sm border-b border-burntorange">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-16">
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-8">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <div class="rounded-full bg-gold bg-opacity-10 p-1.5 flex items-center justify-center animate-glow">
@@ -53,7 +53,7 @@
             <div class="hidden md:flex items-center space-x-8">
                 <a href="../../index.html" class="hover:text-gold transition-colors">Home</a>
                 <a href="#audit" class="hover:text-gold transition-colors">Audit</a>
-                <a href="#pricing" class="hover:text-gold transition-colors">Pricing</a>
+                <a href="#packages" class="hover:text-gold transition-colors">Packages</a>
                 <a href="#book" class="hover:text-gold transition-colors">Book</a>
                 <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
             </div>
@@ -69,7 +69,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="../../index.html" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Home</a>
                 <a href="#audit" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Audit</a>
-                <a href="#pricing" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Pricing</a>
+                <a href="#packages" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Packages</a>
                 <a href="#book" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">Book</a>
                 <a href="#faq" class="block px-3 py-2 rounded-md hover:bg-gold hover:bg-opacity-10">FAQ</a>
             </div>
@@ -81,11 +81,11 @@
         <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-charcoal via-black to-charcoal opacity-60"></div>
         <div class="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
             <img src="../assets/images/khedun_digital_automation_logo.png" alt="KD Automation" class="w-96 h-96 mb-6 animate-pulseSlow">
-        <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4">Offline-first. Secure. Tailored by a doctor.</h1>
-        <p class="text-xl max-w-3xl mx-auto mb-8">Automation built for healthcare, legal and other privacy-sensitive sectors using Docker + n8n.</p>
+        <h1 class="text-4xl md:text-6xl font-heading font-bold mb-4 rb-reveal">Offline-first. Secure. Built for every industry.</h1>
+        <p class="text-xl max-w-3xl mx-auto mb-8 rb-reveal">Automation solutions for any industry with specialised options for healthcare and other privacy-sensitive sectors using Docker + n8n.</p>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="#audit" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg transform hover:scale-105 hover:shadow-lg transition-all">Schedule Audit</a>
-            <a href="#pricing" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-charcoal transition-colors">View Pricing</a>
+            <a href="#packages" class="border border-gold text-gold font-semibold px-6 py-3 rounded-lg hover:bg-gold hover:text-charcoal transition-colors">View Packages</a>
         </div>
     </div>
     </section>
@@ -95,10 +95,10 @@
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl font-heading font-semibold mb-6">Who We Serve</h2>
             <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-lg">
-                <li>Solo &amp; group medical practices</li>
-                <li>Specialists and small clinics</li>
+                <li>Clinics & medical practices</li>
+                <li>Small businesses</li>
                 <li>Legal and financial firms</li>
-                <li>Operational businesses</li>
+                <li>Operations teams</li>
                 <li>Privacy-sensitive sectors</li>
             </ul>
         </div>
@@ -125,25 +125,21 @@
     <!-- Pricing -->
     <section class="py-16 px-4 bg-charcoal" id="pricing">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-heading font-semibold text-center mb-8">Medical+ Automation Pricing</h2>
+            <h2 class="text-3xl font-heading font-semibold text-center mb-8">Automation Packages</h2>
             <div class="overflow-x-auto">
             <table class="min-w-full text-left border border-gray-600">
                 <thead class="bg-black bg-opacity-20">
                     <tr>
                         <th class="p-3 border-b border-gray-600">Package</th>
                         <th class="p-3 border-b border-gray-600">Best For</th>
-                        <th class="p-3 border-b border-gray-600">Once-Off</th>
-                        <th class="p-3 border-b border-gray-600">Monthly</th>
-                        <th class="p-3 border-b border-gray-600">Includes</th>
+                                                                        <th class="p-3 border-b border-gray-600">Includes</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-t border-gray-700">
                         <td class="p-3 font-semibold">Medical+ Core</td>
                         <td class="p-3">Solo GP / 1-Room Practice</td>
-                        <td class="p-3">R47,000</td>
-                        <td class="p-3">R6,000</td>
-                        <td class="p-3">
+                                                                        <td class="p-3">
                             – 1–2 offline workflows (intake → Medimass, lab parser)<br>
                             – WhatsApp appointment reminders<br>
                             – POPIA compliance checklist<br>
@@ -155,9 +151,7 @@
                     <tr class="border-t border-gray-700">
                         <td class="p-3 font-semibold">Medical+ Pro</td>
                         <td class="p-3">Specialist / 2–3 Rooms</td>
-                        <td class="p-3">R55,000</td>
-                        <td class="p-3">R7,500</td>
-                        <td class="p-3">
+                                                                        <td class="p-3">
                             – All Core features<br>
                             – + Claim and invoice automation<br>
                             – Auto file organization (labs, sick notes)<br>
@@ -177,32 +171,24 @@
                     <tr>
                         <th class="p-3 border-b border-gray-600">Package</th>
                         <th class="p-3 border-b border-gray-600">Ideal For</th>
-                        <th class="p-3 border-b border-gray-600">Once-Off</th>
-                        <th class="p-3 border-b border-gray-600">Monthly</th>
-                        <th class="p-3 border-b border-gray-600">Includes</th>
+                                                                        <th class="p-3 border-b border-gray-600">Includes</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">Automation Basic</td>
                         <td class="p-3">Solopreneurs / Admin Workflows</td>
-                        <td class="p-3">R4,000</td>
-                        <td class="p-3">R500</td>
-                        <td class="p-3">– 1 simple workflow (email forwarder, lead capture, contact sync)<br>– Webhook/trigger setup<br>– Local deployment via Docker</td>
+                                                                        <td class="p-3">– 1 simple workflow (email forwarder, lead capture, contact sync)<br>– Webhook/trigger setup<br>– Local deployment via Docker</td>
                     </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">Automation Pro</td>
                         <td class="p-3">Small Businesses (2–5 Ops)</td>
-                        <td class="p-3">R7,000</td>
-                        <td class="p-3">R1,000</td>
-                        <td class="p-3">– 3 custom workflows (e.g. CRM sync, chatbot, invoice routing)<br>– Dashboard UI (basic)<br>– SMS/email/Telegram notifications</td>
+                                                                        <td class="p-3">– 3 custom workflows (e.g. CRM sync, chatbot, invoice routing)<br>– Dashboard UI (basic)<br>– SMS/email/Telegram notifications</td>
                     </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">Automation Elite</td>
                         <td class="p-3">Multi-service Ops Teams</td>
-                        <td class="p-3">R11,000</td>
-                        <td class="p-3">R1,500</td>
-                        <td class="p-3">– End-to-end business automation suite<br>– CRM + chatbot + form handling + PDF generator<br>– Scheduled triggers (weekly emails, task delegation)<br>– Data visualization board<br>– Custom Docker deployment & training</td>
+                                                                        <td class="p-3">– End-to-end business automation suite<br>– CRM + chatbot + form handling + PDF generator<br>– Scheduled triggers (weekly emails, task delegation)<br>– Data visualization board<br>– Custom Docker deployment & training</td>
                     </tr>
                 </tbody>
             </table>
@@ -210,9 +196,9 @@
 
             <h3 class="text-2xl font-heading font-semibold text-center mt-10 mb-4">Add-Ons Shared Across Plans</h3>
             <ul class="max-w-4xl mx-auto list-disc list-inside space-y-1">
-                <li>Social Media Auto-Poster: +R2,000 | +R500/mo</li>
-                <li>Reception AI Assistant: +R4,000 | +R1,000/mo</li>
-                <li>CRM/ERP Integration (Zoho, Xero, etc.): +R3,500 | +R800/mo</li>
+                <li>Social Media Auto-Poster add-on</li>
+                <li>Reception AI Assistant option</li>
+                <li>CRM/ERP Integration available</li>
             </ul>
         </div>
     </section>
@@ -220,54 +206,40 @@
     <!-- Medical Add-Ons -->
     <section class="py-16 px-4 bg-black bg-opacity-40" id="addons">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-heading font-semibold text-center mb-10">Medical/Enterprise Add-Ons</h2>
+            <h2 class="text-3xl font-heading font-semibold text-center mb-10">Specialized Add-Ons</h2>
             <div class="overflow-x-auto">
             <table class="min-w-full text-left border border-gray-600">
                 <thead class="bg-black bg-opacity-20">
                     <tr>
                         <th class="p-3 border-b border-gray-600">Add-On</th>
                         <th class="p-3 border-b border-gray-600">Description</th>
-                        <th class="p-3 border-b border-gray-600">Once-Off</th>
-                        <th class="p-3 border-b border-gray-600">Monthly</th>
-                    </tr>
+                                                                    </tr>
                 </thead>
                 <tbody>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🗣️ Voice AI Receptionist</td>
                         <td class="p-3">Handles calls, bookings, questions</td>
-                        <td class="p-3">R14,000</td>
-                        <td class="p-3">R2,500</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">📊 KPI Dashboard Pro</td>
                         <td class="p-3">Clinic/business performance metrics</td>
-                        <td class="p-3">R7,000</td>
-                        <td class="p-3">R1,750</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🧾 Patient Triage Chatbot</td>
                         <td class="p-3">Flags symptoms &amp; urgency</td>
-                        <td class="p-3">R6,000</td>
-                        <td class="p-3">R1,250</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🔄 WhatsApp Triage Routing</td>
                         <td class="p-3">Auto-routes to correct specialist/admin</td>
-                        <td class="p-3">R4,000</td>
-                        <td class="p-3">R950</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🧠 AI Document Assistant (RAG)</td>
                         <td class="p-3">Private doc Q&amp;A (offline/local)</td>
-                        <td class="p-3">R9,000</td>
-                        <td class="p-3">R2,000</td>
-                    </tr>
+                                                                    </tr>
                     <tr class="border-t border-gray-700">
                         <td class="p-3">🔐 Docker Stack Pro Build</td>
                         <td class="p-3">Multi-agent, vaults, logging</td>
-                        <td class="p-3">R12,000</td>
-                        <td class="p-3">R2,000 optional support</td>
-                    </tr>
+                                                                    </tr>
                 </tbody>
             </table>
             </div>
@@ -278,13 +250,13 @@
     <section class="py-16 px-4 bg-charcoal" id="retainer">
         <div class="max-w-4xl mx-auto text-center space-y-6">
             <h2 class="text-3xl font-heading font-semibold">Results-Based Payment Plan</h2>
-            <p>Lower upfront cost: R10,000–R15,000<br>
+            <p>Lower upfront cost with payments tied to results.<br>
             Ongoing monthly payment tied to measurable results like increased claims, reduced no-shows or time saved.</p>
             <p class="italic">Commission brackets:</p>
             <ul class="list-disc list-inside inline-block text-left">
-                <li>R100/task or form automated</li>
-                <li>R300 per successful medical aid claim</li>
-                <li>R500 per converted follow-up, referral or return booking</li>
+                <li>Commission per automated task</li>
+                <li>Bonuses for successful claims</li>
+                <li>Bonuses for conversions and follow-ups</li>
             </ul>
             <p class="text-sm">Requires 30-day audit benchmark before activation.</p>
         </div>
@@ -303,10 +275,10 @@
     <!-- Audit CTA -->
     <section class="py-16 px-4 bg-charcoal" id="audit">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-heading font-semibold mb-4">Schedule an Automation Audit with Dr. Bryce</h2>
+            <h2 class="text-3xl font-heading font-semibold mb-4">Schedule an Automation Audit</h2>
             <form class="space-y-4">
                 <input type="text" placeholder="Your Name" class="w-full p-2 rounded text-charcoal" required>
-                <input type="text" placeholder="Practice Name" class="w-full p-2 rounded text-charcoal" required>
+                <input type="text" placeholder="Company Name" class="w-full p-2 rounded text-charcoal" required>
                 <input type="date" placeholder="Preferred Date" class="w-full p-2 rounded text-charcoal" required>
                 <button type="submit" class="bg-gold text-charcoal font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90">Submit</button>
             </form>
@@ -361,6 +333,7 @@
     </footer>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/reactbits.js"></script>
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -368,5 +341,6 @@
             mobileMenu.classList.toggle('hidden');
         });
     </script>
+<script>ReactBits.reveal(".rb-reveal");</script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<!-- Khedun Digital 3D Atom Component -->
+<div id="kd-atom-container" class="kd-atom-container">
+    <div class="kd-atom">
+        <!-- Orbital Rings -->
+        <div class="kd-orbital-ring kd-orbital-ring-1"></div>
+        <div class="kd-orbital-ring kd-orbital-ring-2"></div>
+        <div class="kd-orbital-ring kd-orbital-ring-3"></div>
+
+        <!-- Electrons -->
+        <div class="kd-electron kd-electron-1"></div>
+        <div class="kd-electron kd-electron-2"></div>
+        <div class="kd-electron kd-electron-3"></div>
+        <div class="kd-electron kd-electron-4"></div>
+
+        <!-- Central Nucleus -->
+        <div class="kd-nucleus"></div>
+    </div>
+
+    <!-- Particle Field Background -->
+    <div class="kd-particle-field"></div>
+</div>
+
+<script>
+    // Initialize the atom when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize atom with default settings
+        if (typeof KDAtom !== 'undefined' && document.getElementById('kd-atom-container')) {
+            window.kdAtom = new KDAtom('kd-atom-container', {
+                size: 384,
+                colors: {
+                    primary: '#FFD700',
+                    secondary: '#E95A0C',
+                    accent: '#FF6B35'
+                },
+                animationSpeed: 1,
+                interactive: true
+            });
+        }
+    });
+</script>

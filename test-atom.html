@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Atom Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/assets/styles/atom.css">
+    <style>
+        body {
+            background: #1A1A1A;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .test-container {
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>3D Atom Component Test</h1>
+        <p>Testing the Khedun Digital 3D atom structure</p>
+
+        <div id="kd-atom-container" class="mb-8"></div>
+
+        <div class="mt-8">
+            <button onclick="changeColors()" class="bg-yellow-500 text-black px-4 py-2 rounded mr-4">Change Colors</button>
+            <button onclick="changeSpeed()" class="bg-orange-500 text-black px-4 py-2 rounded">Change Speed</button>
+        </div>
+    </div>
+
+    <script src="src/assets/js/atom.js"></script>
+    <script>
+        // Initialize the atom component
+        if (typeof KDAtom !== 'undefined' && document.getElementById('kd-atom-container')) {
+            window.kdAtom = new KDAtom('kd-atom-container', {
+                size: 384,
+                colors: {
+                    primary: '#FFD700',
+                    secondary: '#E95A0C',
+                    accent: '#FF6B35'
+                },
+                animationSpeed: 1,
+                interactive: true
+            });
+        }
+
+        function changeColors() {
+            if (window.kdAtom) {
+                const colors = [
+                    { primary: '#FF6B6B', secondary: '#4ECDC4', accent: '#45B7D1' },
+                    { primary: '#96CEB4', secondary: '#FFEAA7', accent: '#DDA0DD' },
+                    { primary: '#74B9FF', secondary: '#A29BFE', accent: '#FD79A8' }
+                ];
+                const randomColors = colors[Math.floor(Math.random() * colors.length)];
+                window.kdAtom.updateColors(randomColors);
+            }
+        }
+
+        function changeSpeed() {
+            if (window.kdAtom) {
+                const speeds = [0.5, 1, 1.5, 2];
+                const randomSpeed = speeds[Math.floor(Math.random() * speeds.length)];
+                window.kdAtom.setSpeed(randomSpeed);
+            }
+        }
+    </script>
+</body>
+</html>
